@@ -4,7 +4,7 @@ const Buffer = require('buffer').Buffer;
 const DATA_URL = 'https://bitbucket.org/!api/2.0/snippets/tawkto/aA8zqE/4f62624a75da6d1b8dd7f70e53af8d36a1603910/files/webstats.json';
 
 async function processStatistics(startDate, endDate) {
-  if (startDate && endDate && !(startDate instanceof Date || endDate instanceof Date)) {
+  if (startDate && endDate && !(startDate instanceof Date && endDate instanceof Date)) {
     throw Error('You passed incorrect date in arguments');
   }
 
